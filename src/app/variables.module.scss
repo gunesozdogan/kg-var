@@ -1,0 +1,9 @@
+$main-dark-color: #222;
+$main-light-color: #fff;
+
+@mixin flexbox($align: center, $justify: center, $direction: row) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align;
+  justify-content: $justify;
+}
