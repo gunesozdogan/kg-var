@@ -1,0 +1,5 @@
+@import '../../variables.module.scss';
+
+.container {
+  @include flexbox();
+}

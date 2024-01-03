@@ -1,5 +1,11 @@
+@font-face {
+  font-family: 'Agus-font';
+  src: url('/public/fonts/Agus Sans Regular 400.otf') format('opentype');
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Agus-font';
 }

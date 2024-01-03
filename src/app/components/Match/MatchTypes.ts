@@ -1,12 +1,12 @@
-interface Fixture {
+type Fixture = {
   id: number;
   referee: null | string;
   timezone: string;
   date: string;
   timestamp: number;
   periods: {
-    first: null | any; // You can replace 'any' with a more specific type if needed
-    second: null | any; // You can replace 'any' with a more specific type if needed
+    first: null | any;
+    second: null | any;
   };
   venue: {
     id: number;
@@ -16,11 +16,11 @@ interface Fixture {
   status: {
     long: string;
     short: string;
-    elapsed: null | any; // You can replace 'any' with a more specific type if needed
+    elapsed: null | any;
   };
-}
+};
 
-interface League {
+type League = {
   id: number;
   name: string;
   country: string;
@@ -28,48 +28,48 @@ interface League {
   flag: string;
   season: number;
   round: string;
-}
+};
 
-interface Team {
+type Team = {
   id: number;
   name: string;
   logo: string;
-  winner: null | any; // You can replace 'any' with a more specific type if needed
-}
+  winner: null | any;
+};
 
-interface Goals {
-  home: null | any; // You can replace 'any' with a more specific type if needed
-  away: null | any; // You can replace 'any' with a more specific type if needed
-}
+type Goals = {
+  home: null | any;
+  away: null | any;
+};
 
-interface Halftime {
-  home: null | any; // You can replace 'any' with a more specific type if needed
-  away: null | any; // You can replace 'any' with a more specific type if needed
-}
+type Halftime = {
+  home: null | any;
+  away: null | any;
+};
 
-interface Fulltime {
-  home: null | any; // You can replace 'any' with a more specific type if needed
-  away: null | any; // You can replace 'any' with a more specific type if needed
-}
+type Fulltime = {
+  home: null | any;
+  away: null | any;
+};
 
-interface Extratime {
-  home: null | any; // You can replace 'any' with a more specific type if needed
-  away: null | any; // You can replace 'any' with a more specific type if needed
-}
+type Extratime = {
+  home: null | any;
+  away: null | any;
+};
 
-interface Penalty {
-  home: null | any; // You can replace 'any' with a more specific type if needed
-  away: null | any; // You can replace 'any' with a more specific type if needed
-}
+type Penalty = {
+  home: null | any;
+  away: null | any;
+};
 
-interface Score {
+type Score = {
   halftime: Halftime;
   fulltime: Fulltime;
   extratime: Extratime;
   penalty: Penalty;
-}
+};
 
-export interface MatchType {
+export type MatchType = {
   fixture: Fixture;
   league: League;
   teams: {
@@ -78,4 +78,4 @@ export interface MatchType {
   };
   goals: Goals;
   score: Score;
-}
+};
